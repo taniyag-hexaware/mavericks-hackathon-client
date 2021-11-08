@@ -49,18 +49,11 @@
                     max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls src={{data.Src}} ios-src={{data.IosSrc}}
                     alt="A 3D model of an armchair." poster={{data.Product_Image}} loading="lazy">
 
-                    <div id="controls" class="dim">
+                    <div *ngIf="variants.length>0" id="controls" class="dim">
                       <label for="src">Product:</label>
-                      <select id="src">
-                        <option
-                          value="https://tulanedigcontent.blob.core.windows.net/web-ar-demo/Comfort%20in%20the%20Kitchen.glb">
-                          Chair</option>
-                        <option
-                          value="https://tulanedigcontent.blob.core.windows.net/web-ar-demo/CrossRoads%20Of%20Style%20and%20Function.glb">
-                          Mixer</option>
-                        <option
-                          value="https://tulanedigcontent.blob.core.windows.net/web-ar-demo/Make%20it%20your%20Own.glb">
-                          Cactus</option>
+                      <select id="src"  (change)="onSelect($event.target.value)">
+                        <option *ngFor="let v of variants" value={{v.Model_ID}}>{{v.Name}}</option>
+                        
                       </select><br>
 
 
