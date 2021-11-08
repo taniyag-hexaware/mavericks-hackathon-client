@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class ModelService {
 
-  getApi : string ='http://localhost:7006/api/models/';
-  getByModelId : string ='http://localhost:7006/api/model/modelId';
-  getByCategory : string ='http://localhost:7006/api/model/category'
+  getApi : string ='https://mavericks-hackathon-aquila.herokuapp.com/api/models/';
+  getByModelId : string ='https://mavericks-hackathon-aquila.herokuapp.com/api/model/modelId';
+  getByCategory : string ='https://mavericks-hackathon-aquila.herokuapp.com/api/model/category'
   constructor(private http: HttpClient) {}
 
   public getModel() : Observable<any>{
