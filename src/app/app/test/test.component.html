@@ -1,0 +1,34 @@
+<model-viewer id="dimension-demo" ar ar-modes="webxr" ar-scale="fixed" camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls src="https://tulanedigcontent.blob.core.windows.net/web-ar-demo/Book%20Rack_1.glb" alt="A 3D model of an armchair.">
+    <!-- <button slot="hotspot-dot+X-Y+Z" class="dot" data-position="1 -1 1" data-normal="1 0 0"></button>
+    <button slot="hotspot-dim+X-Y" class="dim" data-position="1 -1 0" data-normal="1 0 0"></button>
+    <button slot="hotspot-dot+X-Y-Z" class="dot" data-position="1 -1 -1" data-normal="1 0 0"></button>
+    <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1" data-normal="1 0 0"></button>
+    <button slot="hotspot-dot+X+Y-Z" class="dot show" data-position="1 1 -1" data-normal="0 1 0"></button>
+    <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1" data-normal="0 1 0"></button>
+    <button slot="hotspot-dot-X+Y-Z" class="dot show" data-position="-1 1 -1" data-normal="0 1 0"></button>
+    <button slot="hotspot-dim-X-Z" class="dim" data-position="-1 0 -1" data-normal="-1 0 0"></button>
+    <button slot="hotspot-dot-X-Y-Z" class="dot" data-position="-1 -1 -1" data-normal="-1 0 0"></button>
+    <button slot="hotspot-dim-X-Y" class="dim" data-position="-1 -1 0" data-normal="-1 0 0"></button>
+    <button slot="hotspot-dot-X-Y+Z" class="dot" data-position="-1 -1 1" data-normal="-1 0 0"></button> -->
+  
+    <div id="controls" class="dim">
+      <label for="src">Product:</label>
+      <select id="src">
+        <option value="https://tulanedigcontent.blob.core.windows.net/web-ar-demo/Comfort%20in%20the%20Kitchen.glb">Chair</option>
+        <option value="https://tulanedigcontent.blob.core.windows.net/web-ar-demo/CrossRoads%20Of%20Style%20and%20Function.glb">Mixer</option>
+        <option value="https://tulanedigcontent.blob.core.windows.net/web-ar-demo/Make%20it%20your%20Own.glb">Cactus</option>
+      </select><br>
+  
+      <!-- <label for="show-dimensions">Show Dimensions:</label>
+      <input id="show-dimensions" type="checkbox" checked="true"> -->
+    </div>
+  </model-viewer>
+  <script>
+
+const modelViewer = document.querySelector('#dimension-demo');
+
+modelViewer.querySelector('#src').addEventListener('input', (event) => {
+  modelViewer.src = event.target.value;
+});
+</script>
+  
