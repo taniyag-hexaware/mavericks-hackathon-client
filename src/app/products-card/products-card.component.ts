@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
-import * as test from './test.json';
 import {ModelService} from '../services/model.service'
 
 @Component({
@@ -9,7 +8,7 @@ import {ModelService} from '../services/model.service'
 })
 export class ProductsCardComponent implements OnInit {
 
-  data :any =  test.value;
+  data :any ;
   @Input() public category 
   constructor(private modelService : ModelService) { }
 
@@ -31,6 +30,7 @@ ngOnChanges(changes: SimpleChanges)
       this.modelService.getModelByCategory(changes.category.currentValue).subscribe(
         data=>{
          console.log(data);
+         this.data=data.result;
         }
       )
 }

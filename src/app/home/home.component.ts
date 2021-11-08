@@ -8,7 +8,7 @@ import {
 import { Products, Product } from '../shared/models/product.model';
 import '@google/model-viewer';
 import * as categoryData from './list-category.json'
-import * as data from './test.json'
+
 
 @Component({
   selector: 'app-home',
@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
   productPageCounter = 1;
   additionalLoading = false;
   categories :any =  categoryData.value;
-  mainData : any = data.value[0];
+  mainData : any ;
   Product_Image: "https://tulanedigcontent.blob.core.windows.net/web-ar-demo/Book%20Rack_1.png";
   category:any = 'test';
 

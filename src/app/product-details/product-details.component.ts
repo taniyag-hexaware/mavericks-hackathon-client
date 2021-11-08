@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import * as test from '../products-card/test.json';
+
 import {ModelService} from '../services/model.service';
 
 @Component({
@@ -10,7 +10,7 @@ import {ModelService} from '../services/model.service';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  data :any =  test.value[0];
+  data :any ;
   variants:any=[];
   constructor(private route : ActivatedRoute, private modelService : ModelService) { }
 

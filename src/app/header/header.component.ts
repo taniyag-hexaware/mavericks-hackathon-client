@@ -25,11 +25,15 @@ export class HeaderComponent implements OnInit {
     else this.isMobile = true;
   }
 
-  constructor(){} 
+  constructor(
+    
+  ) {
+    this.getScreenSize();
+    
+  }
 
   ngOnInit(): void {
-    // if (this._token.getUser()) this.isLoggedIn = true;
-    // else this.isLoggedIn = false;
+   
   }
 
   toggleMenu() {
@@ -41,11 +45,11 @@ export class HeaderComponent implements OnInit {
   }
 
   removeProductFromCart(id: number) {
-    // this._cart.removeProduct(id);
+   
   }
 
   logout() {
-    // this._auth.logout();
+   
     this.isMenuOpen = false;
   }
 }

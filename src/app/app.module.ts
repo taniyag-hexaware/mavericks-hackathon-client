@@ -27,7 +27,9 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import  '@google/model-viewer';
 import { ProductsCardComponent } from './products-card/products-card.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { TestComponent } from './app/test/test.component';
+import { HeaderComponent } from './header/header.component';
+
+
 
 
 
@@ -39,7 +41,8 @@ registerLocaleData(en);
     HomeComponent,
     ProductsCardComponent,
     ProductDetailsComponent,
-    TestComponent,
+    HeaderComponent,
+  
    
   ],
   imports: [
