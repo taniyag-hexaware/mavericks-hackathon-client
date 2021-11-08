@@ -123,6 +123,13 @@ hr {
 .card-body {
     padding: 0.3rem 0.3rem 0.2rem
 }
+#controls {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    max-width: unset;
+    transform: unset;
+  }
 
 .dim{
     // background: #fff;
@@ -160,6 +167,17 @@ hr {
     height: max-content;
     transform: translate3d(-50%, -50%, 0);
     --min-hotspot-opacity: 0;
+  }
+  .show{
+    --min-hotspot-opacity: 1;
+  }
+
+  .hide{
+    display: none;
+  }
+  /* This keeps child nodes hidden while the element loads */
+  :not(:defined) > * {
+    display: none;
   }
   .qrcode{
 
