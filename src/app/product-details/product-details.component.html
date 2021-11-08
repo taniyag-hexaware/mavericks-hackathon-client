@@ -27,14 +27,14 @@
               </model-viewer> -->
               <div class="swiper-container zoom-top ">
                 <div class="swiper-wrapper">
-                  <model-viewer class="c modal-fullscreen-md-down" id="model-viewer-id" ar
-                    ar-modes="scene-viewer webxr quick-look" ar-scale="fixed" camera-controls src={{data.Src}}
+                  <model-viewer  id="model-viewer-id" ar ar-modes="scene-viewer webxr quick-look" ar-scale="fixed" camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" 
+                  camera-controls src={{data.Src}}
                     ios-src={{data.IosSrc}} alt="A 3D model of an astronaut" background-color="#9FB8AD"
                     shadow-intensity="1"  loading="lazy" poster={{data.Product_Image}}
                     ar-status="not-presenting"
                     style="background-color: rgb(238, 238, 238); width: 400px; height: 300px;">
                     <br>
-                    <div *ngIf="variants.length>0" id="controls" class="dim" style="position: absolute; top:10px">
+                    <div *ngIf="variants.length>0" id="controls" class="dim" >
                       
                       <select id="src" (change)="onSelect($event.target.value)" placeholder="Re">
                         <label for="src">Product:</label>
