@@ -23,13 +23,26 @@ export class ProductDetailsComponent implements OnInit {
      data=>{
        this.data=data[0];
        console.log(this.data);
+       if(data[0].variants.length>0){
+
+        this.variants=data[0].variants
+
+        this.data=data[0].variants[0]
+
+       }
      }
   )
 
   }
   onSelect(event)
   {
-    
+  for(let i=0;i<this.variants.length;i++)
+  {
+   if(this.variants[i].Model_ID==event)
+   {
+      this.data=this.variants[i]
+   }
+  }  
   }
 
 }
