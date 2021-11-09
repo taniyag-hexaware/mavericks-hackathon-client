@@ -35,6 +35,8 @@ export class ProductDetailsComponent implements OnInit {
         this.variants=data[0].variants
 
         this.data=data[0].variants[0]
+        this.Src=this.data.Src;
+        this.IosSrc=this.data.IosSrc;
         console.log(this.data)
 
        }
@@ -49,6 +51,8 @@ export class ProductDetailsComponent implements OnInit {
    if(this.variants[i].Model_ID==event)
    {
       this.data=this.variants[i]
+      this.Src=this.data.Src;
+      this.IosSrc=this.data.IosSrc;
    }
   }  
   }

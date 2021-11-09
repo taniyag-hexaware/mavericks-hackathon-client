@@ -1,4 +1,4 @@
-<div style="background-color: #eee;height:100%; ">
+<div style="background-color: #eee;height:100%; padding-top: 50px; padding-right: 20px; padding-left: 20px;">
   <!-- <section class="mb-5"> -->
 
 
@@ -47,7 +47,7 @@
                   <!--new model-->
                   <model-viewer id="dimension-demo" ar ar-modes="webxr" ar-scale="fixed" camera-orbit="-30deg auto auto"
                     max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls src={{Src}}
-                     alt="A 3D model of an armchair." poster={{data.Product_Image}}
+                    ios-src={{IosSrc}} alt="A 3D model of an armchair." poster={{data.Product_Image}}
                     loading="lazy" style="background-color: rgb(238, 238, 238); width: 400px; height: 300px;">
 
                     <div *ngIf="variants.length>0" id="controls" class="dim">
