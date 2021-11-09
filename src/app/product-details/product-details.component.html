@@ -1,11 +1,11 @@
-<div style="background-color: #eee;height:100%">
+<div style="background-color: #eee;height:100%; padding-top: 50px; padding-left: 20px; padding-right: 20px;">
   <!-- <section class="mb-5"> -->
 
 
 
 
   <div class="row">
-    <div class="col-md-6 mb-4 mb-md-0">
+    <div class="col-md-5 mb-4 mb-md-0">
 
       <div id="mdb-lightbox-ui"></div>
 
@@ -46,14 +46,15 @@
 
                   <!--new model-->
                   <model-viewer id="dimension-demo" ar ar-modes="webxr" ar-scale="fixed" camera-orbit="-30deg auto auto"
-                    max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls src={{data.Src}} ios-src={{data.IosSrc}}
-                    alt="A 3D model of an armchair." poster={{data.Product_Image}} loading="lazy">
+                    max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls src={{data.Src}}
+                    ios-src={{data.IosSrc}} alt="A 3D model of an armchair." poster={{data.Product_Image}}
+                    loading="lazy" style="background-color: rgb(238, 238, 238); width: 400px; height: 300px;">
 
                     <div *ngIf="variants.length>0" id="controls" class="dim">
-                      <label for="src">Product:</label>
-                      <select id="src"  (change)="onSelect($event.target.value)">
+                      <label for="src">Variants :&nbsp; </label>
+                      <select id="src" (change)="onSelect($event.target.value)">
                         <option *ngFor="let v of variants" value={{v.Model_ID}}>{{v.Name}}</option>
-                        
+
                       </select><br>
 
 
@@ -82,28 +83,15 @@
       </div>
 
     </div>
-    <div class="col-md-6">
+    <div class="col-md-7">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
             <h2>{{data.Name}}</h2>
             <p class="mb-2 text-muted text-uppercase small">{{data.SubCategory}}</p>
-            <p><span class="mr-1"><strong>{{data.PriceText}}</strong></span></p>
+            <p><span class="mr-1"><strong>$ {{data.Price}}</strong></span></p>
           </div>
-          <div class="col-sm-6">
 
-            <div class="row" style="margin-left: 110px;">
-              <!-- <div class="col-sm-8"> -->
-              <p class="qrtext" style="float:left;">View in AR </p>
-              <!-- </div> -->
-              <!-- <div class="col-md-2"> -->
-              <i class="fa fa-android" style="font-size:24px; color:#99cc00;margin-left:10px"></i>
-              <!-- </div> -->
-              <!-- <div class="col-md-2"> -->
-              <i class="fa fa-apple" style="font-size:24px;margin-left:10px"></i>
-              <!-- </div> -->
-            </div>
-          </div>
         </div>
       </div>
 
